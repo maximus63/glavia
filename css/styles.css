@@ -1,0 +1,282 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+/* =========================
+   ROOT & RESET
+========================= */
+:root {
+  --bg-main: #f4e8e2;
+  --bg-light: #ffffff;
+  --text-dark: #2b2b2b;
+  --text-muted: #6f6f6f;
+  --accent: #2f2f2f;
+
+  --radius: 10px;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  background: var(--bg-main);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: none;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background: var(--bg-main);
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 520px;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.3);
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 100%;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 320px;
+  background: #e2d2ca;
+  border-radius: var(--radius);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   TABLET & LAPTOP
+========================= */
+@media (min-width: 768px) {
+
+  .nav {
+    display: flex;
+  }
+
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-image {
+    max-width: 520px;
+  }
+
+  .image-placeholder {
+    height: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+/* =========================
+   PRODUCTS SECTION
+========================= */
+.products {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 50px;
+}
+
+.products-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.product-image {
+  height: 160px;
+  background: #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.product-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Laptop */
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #2b2b2b;
+}
+
+.hero h1 span {
+  display: block;
+  font-weight: 600;
+}
